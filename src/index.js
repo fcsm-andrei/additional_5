@@ -33,10 +33,10 @@ module.exports = function check(str, bracketsConfig) {
 
 	let tmp = [],
 		el;
-	for(i = 0, lenNewStr = newStr.length; i < lenNewStr; i++) {
-		for(j = 0; j < lenBrackets; j++) {
-			if(firstBrackets[j] === newStr[i] ) {
-				tmp.push(newStr[i]);
+	for(i = 0, lenNewStr = lenBrackets; i < lenNewStr; i++) {
+		for(j = 0; j < newStr.length; j++) {
+			if(firstBrackets[i] === newStr[j] ) {
+				tmp.push(newStr[j]);
 			} else if(el !=="undefined"){
 				el = tmp.shift();							
 			} else {bool = false};
